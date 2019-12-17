@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Cascader/>
+    <Cascader :options="options"></Cascader>
   </div>
 </template>
 
@@ -12,6 +12,44 @@ export default {
   components: {
     Cascader,
   },
+  data() {
+    return {
+      options:[
+        {
+          label: '肉类',
+          children: [
+            {
+              label: '猪肉',
+              children: [
+                {
+                  label: '五花肉'
+                },
+                {
+                  label: '排骨'
+                },
+              ]
+            }
+          ]
+        },
+        {
+          label: '蔬菜',
+          children: [
+            {
+              label: '青菜',
+              children: [
+                {
+                  label: '上海青'
+                },
+                {
+                  label: '油麦菜'
+                },
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
 };
 </script>
 
