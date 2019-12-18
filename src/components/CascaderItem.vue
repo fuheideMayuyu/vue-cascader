@@ -14,7 +14,7 @@
 <script>
 
 export default {
-  name: 'CascaderItme',
+  name: 'CascaderItme', // 递归组件必须命名，来做区分
   props: {
     options: {
       type: Array,
