@@ -5,10 +5,8 @@
           <div class="label" @click="select(item)">{{item.label}}</div>
         </div>
       </div>
-      <div class="content-right" >
-        <div class="label" v-for="(item, index) in lists" :key="index">
-          <div class="label">{{item.label}}</div>
-        </div>
+      <div class="content-right" v-if="lists && lists.length > 0">
+        <CascaderItme :options="lists"></CascaderItme>
       </div>
   </div>
 </template>
@@ -16,6 +14,7 @@
 <script>
 
 export default {
+  name: 'CascaderItme',
   props: {
     options: {
       type: Array,
